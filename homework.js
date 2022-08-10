@@ -23,3 +23,5 @@ class Hamster
         return this.price;
    }
 }
+
+

@@ -34,9 +34,9 @@ console.log(hamsterPrice);
 
 class Person
 {
-     constructor(Samita,age=0,height=0,weight=0,mood=0,hamster=[],bankAccount=0)
+     constructor(name,age=0,height=0,weight=0,mood=0,hamster=[],bankAccount=0)
      {
-          this.name= Samita;
+          this.name= name;
           this.age= age;
           this.height= height;
           this.weight= weight;
@@ -70,11 +70,13 @@ class Person
      {
           this.weight++;
           this.mood++;
+          return(this.weight + this.mood);
      }
 
      exercise()
      {
           this.weight--;
+          return this.weight;
      }
 
      ageUp()
@@ -98,6 +100,33 @@ class Person
      }
 
 }
-const newPerson= new Person();
+const timmy= new Person('Timmy');
+
+// Increasing age to 5, eat five times and have him exercise five times
+while(timmy.age < 5)
+{
+     timmy.ageUp();
+     timmy.eat();
+     timmy.exercise();
+
+}
+
+//Increasing age from 5 to 9,
+while(timmy.age < 9)
+{
+     timmy.ageUp();
+}
+
+myhamster.owner ='Timmy';
+while(timmy.age <15)
+{
+     timmy.ageUp();
+}
+for(let i=0;i<2;i++)
+{
+     timmy.eat();
+     timmy.exercise();
+}
+
 
 

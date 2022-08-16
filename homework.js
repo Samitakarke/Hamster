@@ -128,5 +128,44 @@ for(let i=0;i<2;i++)
      timmy.exercise();
 }
 
+class Dinner
+{
+     constructor (appetizer,entree,dessert)
+     {
+          this.appetizer = appetizer;
+          this.entree = entree;
+          this.dessert = dessert;
 
+     }
+
+}
+class chef
+{
+     constructor(factoryType)
+     {
+          this.factoryType = factoryType;
+          this.dinnerCollection = [];
+     }
+
+     makeNewDinner(appetizer,entree,dessert)
+     {
+          const newDinner = new Dinner(appetizer,entree,dessert);
+          this.dinnerCollection = []
+     }
+
+     printDinner()
+     {
+          for (let dinner of this.dinnerCollection)
+          {
+               console.log(dinner);
+          }
+     }
+}
+
+let happyDinner = new chef();
+
+
+happyDinner.makeNewDinner('wings','rib eye','sugar cookie');
+happyDinner.makeNewDinner('cheese dip', 'grilled chicken','cheesecake');
+happyDinner.makeNewDinner('mozzarella stick', 'marinated pork', 'vanilla ice cream');
 
